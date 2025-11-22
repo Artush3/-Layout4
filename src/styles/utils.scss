@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.visible-screen-lg {
+  @include screen-lg-above {
+    display: none !important;
+  }
+}
+
+.hidden-screen-lg {
+  @include screen-lg {
+    display: none !important;
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "number-input",
+    "label": "Введите номер телефона",
+    "placeholder": "Телефон",
+    "type": "tel"
+  },
+  {
+    "id": "mail-input",
+    "label": "Введите почту",
+    "placeholder": "Почта",
+    "type": "email"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Получайте бонусы за купоны",
+    "description": "В особые дни у вас есть возможность активировать бонусный купон со скидкой",
+    "imgSrc": "/src/assets/images/terms/percent.svg",
+    "titleButton": "Активировать"
+  },
+  {
+    "title": "Богатое меню для всей семьи",
+    "description": "Наше меню состоит из самых разнообразных блюд, которые подойдут для всей семьи",
+    "imgSrc": "/src/assets/images/terms/menu.svg",
+    "titleButton": "К меню"
+  },
+  {
+    "title": "Доставим в любой день и в любое время",
+    "description": "Наш сервис организует доставку заказа круглые сутки, даже в выходные дни",
+    "imgSrc": "/src/assets/images/terms/time.svg",
+    "titleButton": "О доставке"
+  }
+]

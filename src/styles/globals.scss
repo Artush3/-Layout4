@@ -1,0 +1,80 @@
+html {
+  background-color: var(--color-light);
+}
+
+body {
+  @include flex {
+    flex-direction: column;
+  }
+
+  overflow-x: hidden;
+  font-family: var(--font-family-primary);
+  font-size: fluid(17, 14);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  color: var(--color-grey);
+
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+.h1,
+h3,
+.h3 {
+  font-weight: var(--font-weight-bold);
+}
+
+h1,
+.h1 {
+  font-size: fluid(40, 30);
+}
+
+h2,
+.h2 {
+  font-size: fluid(20, 16);
+  font-weight: var(--font-weight-semibold);
+}
+
+h3,
+.h3 {
+  font-size: 16px;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:not(.button) {
+    @include hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+:focus-visible {
+  outline: 3px dashed var(--color-accent);
+  outline-offset: 3px;
+  transition-duration: 0s !important;
+}

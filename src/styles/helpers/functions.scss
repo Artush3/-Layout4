@@ -1,0 +1,21 @@
+@use 'constants' as *;
+@use 'sass:math';
+
+@function fluid($max: 100, $min: 10) {
+  $maxViewportWidth: $container-desktop-width;
+  $minViewportWidth: 375;
+
+  $maxSize: $max;
+  $minSize: $min;
+  $maxWidth: $maxViewportWidth;
+  $minWidth: $minViewportWidth;
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  @return clamp(
+    #{$minSize * 1px},
+    #{$yAxisIntersection * 1px} + #{$slope * 100vw},
+    #{$maxSize * 1px}
+  );
+}

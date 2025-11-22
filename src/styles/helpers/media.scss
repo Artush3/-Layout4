@@ -1,0 +1,107 @@
+$screen-xxl: 1280px;
+$screen-xl: 1200px;
+$screen-lg: 992px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 480px;
+$screen-xxxs: 390px;
+
+@mixin screen-xxl-above {
+  @media (width > $screen-xxl) {
+    @content;
+  }
+}
+
+@mixin screen-xxl {
+  @media (width <= $screen-xxl) {
+    @content;
+  }
+}
+
+@mixin screen-xl-above {
+  @media (width > $screen-xl) {
+    @content;
+  }
+}
+
+@mixin screen-xl {
+  @media (width <= $screen-xl) {
+    @content;
+  }
+}
+
+@mixin screen-lg-above {
+  @media (width > $screen-lg) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (width <= $screen-lg) {
+    @content;
+  }
+}
+
+@mixin screen-md-above {
+  @media (width > $screen-md) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (width <= $screen-md) {
+    @content;
+  }
+}
+
+@mixin screen-sm-above {
+  @media (width > $screen-sm) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (width <= $screen-sm) {
+    @content;
+  }
+}
+
+@mixin screen-xs-above {
+  @media (width > $screen-xs) {
+    @content;
+  }
+}
+
+@mixin screen-xs {
+  @media (width <= $screen-xs) {
+    @content;
+  }
+}
+
+@mixin screen-xxxs-above {
+  @media (width > $screen-xxxs) {
+    @content;
+  }
+}
+
+@mixin screen-xxxs {
+  @media (width <= $screen-xxxs) {
+    @content;
+  }
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @if $hasActiveEffectOnMobile {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}

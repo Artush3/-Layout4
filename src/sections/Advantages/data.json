@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Бонусная карта",
+    "description": "Подарок от ресторана при накоплении 6-ти заказов",
+    "imgSrc": "/src/assets/images/advantages/star.svg"
+  },
+  {
+    "title": "Собери сам",
+    "description": "У вас есть возможность самостоятельно подобрать ингридиенты для блюда",
+    "imgSrc": "/src/assets/images/advantages/flower.svg"
+  },
+  {
+    "title": "Доставка",
+    "description": "Бесплатная доставка заказа при покупке от 600 рублей",
+    "imgSrc": "/src/assets/images/advantages/delivery.svg"
+  },
+  {
+    "title": "Вебинары",
+    "description": "Научитесь готовить здоровую и вкусную пищу с нашими шеф-поварами",
+    "imgSrc": "/src/assets/images/advantages/webinars.svg"
+  }
+]

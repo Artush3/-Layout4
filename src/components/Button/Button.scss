@@ -1,0 +1,21 @@
+.button {
+  padding-inline: 30px;
+  font-size: 17px;
+  color: var(--color-dark);
+  background-color: var(--color-light-alt4);
+  border: var(--border-accent);
+  border-radius: var(--border-radius-30);
+
+  &--accent {
+    color: var(--color-light);
+    background-color: var(--color-accent);
+  }
+
+  @include hover {
+    scale: 1.1;
+  }
+
+  &:active {
+    scale: 0.9;
+  }
+}

@@ -1,0 +1,23 @@
+[
+    {
+        "links": [
+            { "text": "Документация", "url": "/docs" },
+            { "text": "Вопросы", "url": "/faq" },
+            { "text": "О компании", "url": "/about" }
+        ]
+    },
+    {
+      "links": [
+        { "text": "Вебинары", "url": "/webinars" },
+        { "text": "Факты", "url": "/facts" },
+        { "text": "Контакты", "url": "/contacts" }
+      ]
+    },
+    {
+      "links": [
+        { "text": "Персонал", "url": "/staff" },
+        { "text": "Доставка", "url": "/delivery" },
+        { "text": "Прайс", "url": "/pricing" }
+      ]
+    }
+]

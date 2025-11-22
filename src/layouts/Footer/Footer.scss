@@ -1,0 +1,133 @@
+.footer {
+    background-color: var(--color-dark);
+    padding-block: fluid(88, 48);
+
+    &__inner {
+        @include flex {
+            flex-direction: column;
+            row-gap: fluid(60, 16);
+        }
+    }
+
+    &__basic {
+        max-width: 258px;
+    }
+
+    &__navigation {
+        @include grid(3) {
+            column-gap: 60px;
+        }
+
+        @include screen-xs {
+            --gridColumns: 2;
+            
+            row-gap: 24px;
+        }
+    }
+
+    &__basic {
+        @include flex($justify-content: space-between) {
+            flex-direction: column;
+        }
+
+        min-height: 160px;
+
+        @include screen-xxl {
+            min-height: 70px;
+        }
+    }
+
+    &__list {
+        @include flex {
+            flex-direction: column;
+            row-gap: 16px;
+        }
+    }
+
+    &__installation {
+        @include flex(center, space-between) {
+            column-gap: var(--default-indent);
+        }
+
+        background-color: var(--color-dark-alt);
+        border-radius: var(--border-radius-30);
+        padding: 24px;
+        max-width: 562px;
+
+        @include screen-sm {
+            text-align: center;
+            row-gap: 16px;
+            flex-direction: column;
+        }
+
+        &-title {
+            color: var(--color-light);
+        }
+
+        &-body {
+            @include flex {
+                flex-direction: column;
+                row-gap: 15px;
+            }
+
+            @include screen-sm {
+                display: contents;
+            }
+        }
+
+        &-block-button {
+            @include flex(center) {
+                column-gap: 8px;
+            }
+
+            @include screen-sm {
+                order: 10;
+            }
+        }
+
+        &-button {
+            padding-block: 8px;
+        }
+    }
+
+    &__link {
+        &-title {
+            color: var(--color-light);
+        }
+    }
+
+    &__body {
+        @include flex(start, space-between) {
+            column-gap: 31px;
+
+            @include screen-xxl {
+                flex-wrap: wrap;
+                row-gap: 50px;
+            }
+        }
+    }
+
+    &__basement {
+        @include flex(center, space-between) {
+            column-gap: var(--default-indent);
+        }
+
+        @include screen-md {
+            flex-direction: column;
+            align-items: start;
+            row-gap: 12px;
+        }
+    }
+
+    &__soc1al-list {
+        @include flex(center) {
+            column-gap: 24px;
+        }
+    }
+
+    &__info {
+        @include flex(center) {
+            column-gap: 20px;
+        }
+    }
+}

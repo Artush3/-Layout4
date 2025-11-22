@@ -1,0 +1,20 @@
+.item-card {
+  padding: 24px;
+  background-color: var(--color-light-alt2);
+  border: var(--border-grey);
+
+  &--has-button {
+    @include flex(start, space-between) {
+      flex-direction: column;
+      row-gap: var(--default-indent);
+    }
+  }
+
+  &--light-bg {
+    background-color: var(--color-light);
+  }
+
+  &__button {
+    padding-block: 13px;
+  }
+}

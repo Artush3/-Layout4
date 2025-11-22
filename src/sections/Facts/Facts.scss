@@ -1,0 +1,49 @@
+.facts {
+  &__card {
+    min-height: fluid(456, 373);
+    border-radius: var(--border-radius-30);
+
+    &-image {
+      width: 100%;
+    }
+
+    &-body {
+      @include flex {
+        flex-direction: column;
+        row-gap: fluid(25, 20);
+      }
+    }
+
+    &-title {
+      color: var(--color-dark);
+    }
+
+    &--even {
+      rotate: 1.283deg;
+    }
+
+    &--odd {
+      rotate: -1.283deg;
+    }
+  }
+
+  &__list {
+    @include flex(center) {
+      column-gap: 24px;
+    }
+
+    @include screen-xl {
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+  }
+
+  &__item {
+    @include screen-xl {
+      min-width: 350px;
+      scroll-snap-align: start;
+    }
+
+    flex: 1;
+  }
+}

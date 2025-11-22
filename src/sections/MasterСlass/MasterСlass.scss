@@ -1,0 +1,55 @@
+.master-class {
+  padding-block: var(--section-padding-y);
+
+  &__inner {
+    @include flex(center, space-between) {
+      column-gap: var(--default-indent);
+    }
+
+    @include screen-xl {
+      flex-direction: column;
+      row-gap: 32px;
+    }
+  }
+
+  &__image {
+    width: fluid(584, 327);
+  }
+
+  &__body {
+    max-width: 650px;
+
+    @include screen-xl {
+      order: -1;
+      text-align: center;
+
+      @include flex(center) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title {
+    color: var(--color-dark);
+  }
+
+  &__description {
+    max-width: 550px;
+    margin: fluid(20, 16) 0 fluid(40, 32);
+    font-size: fluid(20, 16);
+  }
+
+  &__form {
+    width: 329px;
+
+    @include screen-xs {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 15px;
+    padding-block: 12px;
+  }
+}

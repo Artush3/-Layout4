@@ -1,0 +1,38 @@
+.hero {
+  padding: fluid(30, 15) 0 fluid(80, 48);
+  background-color: var(--color-dark);
+
+  &__inner {
+    @include flex {
+      flex-direction: column;
+      row-gap: fluid(40, 30);
+    }
+  }
+
+  &__body {
+    text-align: center;
+
+    @include flex(center) {
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    max-width: 650px;
+    color: var(--color-light);
+  }
+
+  &__description {
+    max-width: 550px;
+    margin: fluid(20, 16) 0 fluid(40, 24);
+    font-size: fluid(20, 16);
+  }
+
+  &__menu-button {
+    padding-block: fluid(20, 10);
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

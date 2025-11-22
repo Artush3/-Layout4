@@ -1,0 +1,37 @@
+.section {
+  padding-block: var(--section-padding-y);
+
+  &--lightBg {
+    background-color: var(--color-light-alt3);
+  }
+
+  @include flex {
+    flex-direction: column;
+    row-gap: fluid(70, 32);
+  }
+
+  &__header {
+    @include flex {
+      flex-direction: column;
+      row-gap: fluid(24, 16);
+    }
+
+    &:not(.section--center) {
+      @include screen-sm {
+        text-align: center;
+      }
+    }
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    color: var(--color-dark);
+  }
+
+  &__description {
+    font-size: fluid(20, 16);
+  }
+}

@@ -1,0 +1,72 @@
+@mixin hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@mixin show {
+  visibility: visible;
+  opacity: 1;
+}
+
+@mixin flex(
+  $align-items: stretch,
+  $justify-content: flex-start,
+  $isInline: false
+) {
+  justify-content: $justify-content;
+  align-items: $align-items;
+
+  @if $isInline {
+    display: inline-flex;
+  } @else {
+    display: flex;
+  }
+
+  @content;
+}
+
+@mixin abs-center($axis: both) {
+  position: absolute;
+
+  @if $axis == both or $axis == y {
+    top: 50%;
+  }
+
+  @if $axis == both or $axis == x {
+    left: 50%;
+  }
+
+  @if $axis == both {
+    translate: -50% -50%;
+  } @else if $axis == x {
+    translate: -50%;
+  } @else if $axis == y {
+    translate: 0 -50%;
+  }
+}
+
+@mixin square($sixe) {
+  width: $sixe;
+  height: $sixe;
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+}
+
+@mixin grid($columns: 1) {
+  --gridColumns: #{$columns};
+
+  display: grid;
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
+  @content;
+}

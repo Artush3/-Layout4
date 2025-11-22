@@ -1,0 +1,41 @@
+.accordion {
+  --rotateIcon: 0;
+
+  padding: 24px;
+  background-color: var(--color-light);
+  border: var(--border-grey);
+  border-radius: var(--border-radius-20);
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+  user-select: none;
+
+  &__header {
+    @include flex(center, space-between) {
+      column-gap: var(--default-indent);
+    }
+  }
+
+  &__icon {
+    @include square(50px);
+
+    transition-duration: var(--transition-duration);
+    rotate: var(--rotateIcon);
+  }
+
+  &__title {
+    color: var(--color-dark);
+  }
+
+  &[open] {
+    --rotateIcon: 180deg;
+
+    @include flex {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+
+  @include hover {
+    background-color: var(--color-light-alt4);
+  }
+}

@@ -1,0 +1,49 @@
+.terms {
+  &__list {
+    @include flex(center);
+
+    @include screen-xl {
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+  }
+
+  &__item {
+    flex: 1;
+
+    @include screen-xl {
+      min-width: 327px;
+      scroll-snap-align: start;
+    }
+  }
+
+  &__card {
+    min-height: fluid(511, 380);
+    border-radius: var(--border-radius-30);
+
+    &-wrapper {
+      @include flex(start) {
+        column-gap: 20px;
+      }
+    }
+
+    &-body {
+      @include flex {
+        flex-direction: column;
+        row-gap: fluid(15, 10);
+      }
+    }
+
+    &-title {
+      color: var(--color-dark);
+    }
+
+    &--even {
+      rotate: -1.5deg;
+    }
+
+    &--odd {
+      rotate: 1.5deg;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.advantages {
+  &__list {
+    @include grid(4) {
+      gap: 20px;
+    }
+
+    @include screen-xl {
+      --gridColumns: 3;
+    }
+
+    @include screen-lg {
+      --gridColumns: 2;
+    }
+
+    @include screen-sm {
+      --gridColumns: 1;
+    }
+  }
+
+  &__card {
+    min-height: fluid(295, 218);
+    border-radius: var(--border-radius-15);
+
+    &-body {
+      @include flex {
+        flex-direction: column;
+        row-gap: fluid(27, 21);
+      }
+    }
+
+    &-image {
+      width: fluid(51, 40);
+    }
+
+    &-title {
+      color: var(--color-dark);
+    }
+
+    &--even {
+      rotate: 1.3deg;
+    }
+
+    &--odd {
+      rotate: -1.3deg;
+    }
+  }
+}
